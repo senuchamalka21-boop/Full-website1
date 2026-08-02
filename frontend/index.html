@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProTricks · Sports Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="security-badge">
+    <i class="fas fa-shield-alt"></i> SECURE · 2FA <span>encrypted</span> <i class="fas fa-lock"></i>
+</div>
+
+<div class="app">
+
+    <header class="header">
+        <div class="logo">
+            <i class="fas fa-dumbbell"></i> ProTricks
+        </div>
+        <nav class="nav-links" id="navLinks">
+            <a href="#" class="active" data-page="home"><i class="fas fa-home"></i> Home</a>
+            <a href="#" data-page="products"><i class="fas fa-shopping-bag"></i> Products</a>
+            <a href="#" data-page="cart"><i class="fas fa-shopping-cart"></i> Cart <span class="nav-badge" id="navCartBadge">0</span></a>
+            <a href="#" data-page="about"><i class="fas fa-info-circle"></i> About</a>
+            <a href="#" data-page="contact"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+        <div class="header-actions">
+            <div class="login-icon" id="loginIcon">
+                <i class="fas fa-user-circle"></i>
+                <span id="userStatus">Login</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="security-stripe">
+        <span><i class="fas fa-shield-alt"></i> AES-256 · SSL</span>
+        <span><i class="fas fa-fingerprint"></i> Biometric ready</span>
+        <span><i class="fas fa-clock"></i> session: 2FA active</span>
+        <span><i class="fas fa-database"></i> encrypted cloud</span>
+    </div>
+
+    <div id="page-container"></div>
+
+</div>
+
+<div class="login-modal" id="loginModal">
+    <div class="login-content">
+        <span class="close-login" id="closeLogin">&times;</span>
+        <h2><i class="fas fa-user-lock"></i> Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="loginEmail" placeholder="Enter your email" value="senuchamalka21@gmail.com" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="loginPassword" placeholder="Enter your password" value="Admin@123" required>
+            </div>
+            <button type="submit" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</button>
+            <p id="loginMessage" class="login-message"></p>
+            <p class="demo-hint"><i class="fas fa-info-circle"></i> Demo: use admin credentials above</p>
+        </form>
+    </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
